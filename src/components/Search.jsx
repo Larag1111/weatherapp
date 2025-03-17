@@ -9,6 +9,13 @@ const Search = () => {
         setCity(event.target.value);
     };
 
+    const handleSearch = () => {
+        alert(`Du sökte efter: {$city}`); 
+        //Visar en alert med den stad som användaren skrivit in.
+    };
+
+
+
     return (
         <div>
             <h2>Sök efter en stad</h2>
@@ -19,13 +26,10 @@ const Search = () => {
  onChange={handleInputChange} // När användaren skriver uppdateras state placeholder
      placeholder="Skriv in stadens namn"
      />
-           {/* Här kan vi senare lägga till en knapp för att trigga sökningen */}
-  
+    
+  <button onClick={handleSearch}>Sök</button>
  </div>
     );
-
-
-
 };
 
 
