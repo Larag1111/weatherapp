@@ -1,16 +1,20 @@
 
 import { useState } from 'react';
 
-const Search = () => {
+const Search = ({setCity}) => {
+    const [inputValue, setInputValue] = useState ('');
 
-    const [city, setCity] = useState ('');
+
+
 
     const handleInputChange = (event) => {
-        setCity(event.target.value);
+       setInputValue(event.target.value);
+        
     };
 
     const handleSearch = () => {
-        alert(`Du sökte efter: {$city}`); 
+        setCity(inputValue);
+        alert(`Du sökte efter: ${inputValue}`); 
         //Visar en alert med den stad som användaren skrivit in.
     };
 
@@ -22,8 +26,10 @@ const Search = () => {
  {/* Här kommer vi senare lägga input-fält och knapp */}
  <input
  type="text"
- value={city} //Binder input-fältet till vårt state
- onChange={handleInputChange} // När användaren skriver uppdateras state placeholder
+ value={inputValue} //Binder input-fältet till vårt state
+ onChange={handleInputChange}// onchangeevent är varje gång nån skriver i rutan
+ // så gångar event.target.value det användaren skriver tex paris.
+ //setCity sparar det om en ny stad i app komponenten
      placeholder="Skriv in stadens namn"
      />
     
