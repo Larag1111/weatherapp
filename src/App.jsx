@@ -39,16 +39,14 @@ const addFavorite = (newCity) => {
     setFavorites([...favorites, newCity]);
   }
 }
-  return (
-    <div>
-<h1>Laras Väderapp</h1>
-<Search setCity={setCity}/>
-
-<WeatherDisplay city={city} addFavorite={addFavorite}/>
-<Favorites favorites={favorites} setCity={setCity}/>
-
-    </div>
-  );
+return (
+  <div className="app-container">
+    <h1>Laras Väderapp</h1>
+    <Search setCity={setCity} />
+    <WeatherDisplay city={city} addFavorite={addFavorite} />
+    <Favorites favorites={favorites} setCity={setCity} />
+  </div>
+);
 
 };
 

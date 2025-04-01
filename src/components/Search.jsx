@@ -1,5 +1,6 @@
 
 import { useState } from 'react';
+import './Search.css';
 
 const Search = ({setCity}) => {
     const [inputValue, setInputValue] = useState ('');
@@ -21,10 +22,12 @@ const Search = ({setCity}) => {
 
 
     return (
-        <div>
+
+        <div className="search-wrapper">
             <h2>Sök efter en stad</h2>
  {/* Här kommer vi senare lägga input-fält och knapp */}
  <input
+ className='search-input'
  type="text"
  value={inputValue} //Binder input-fältet till vårt state
  onChange={handleInputChange}// onchangeevent är varje gång nån skriver i rutan
@@ -33,7 +36,8 @@ const Search = ({setCity}) => {
      placeholder="Skriv in stadens namn"
      />
     
-  <button onClick={handleSearch}>Sök</button>
+  <button className='search bottom' onClick={handleSearch}>
+    Sök</button>
  </div>
     );
 };

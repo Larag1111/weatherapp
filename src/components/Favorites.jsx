@@ -1,3 +1,5 @@
+import './Favorites.css';
+
 
 const Favorites = ({ favorites, setCity }) => {
 
@@ -9,7 +11,7 @@ const Favorites = ({ favorites, setCity }) => {
                 {favorites.map((fav, index) => (
                     <li key={index}>
                         <button onClick={() => setCity(fav)}>{fav}
-                            
+
                         </button>
                     </li>
                 ))}
