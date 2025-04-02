@@ -1,9 +1,9 @@
 
 import { useState } from "react";
 import { useEffect } from "react";
-import Favorites from "./components/Favorites";
-import Search from "./components/Search";
-import WeatherDisplay from "./components/WeatherDisplay";
+import Favorites from "./components/Favorites/Favorites";
+import Search from "./components/Search/Search";
+import WeatherDisplay from "./components/WeatherDisplay/WeatherDisplay";
 
 const App = () => {
 
