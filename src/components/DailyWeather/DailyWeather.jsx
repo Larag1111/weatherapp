@@ -1,5 +1,4 @@
 import React from 'react';
-import './WeatherDisplay.css';
 
 const DailyWeather = ({ currentWeather }) => {
   return (
